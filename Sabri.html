@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Sabri</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffc0cb;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: auto;
+    }
+
+    .container {
+      text-align: center;
+      padding: 1rem;
+      z-index: 1;
+      position: relative;
+    }
+
+    .heart-wrapper {
+      width: 250px;
+      margin: 0 auto 2rem;
+      box-shadow: none;
+    }
+
+    .heart {
+      width: 100%;
+      height: auto;
+    }
+
+    .text-block {
+      background-color: rgba(255, 105, 180, 0.3);
+      padding: 1rem;
+      border-radius: 8px;
+      max-width: 500px;
+      margin: 0 auto;
+      color: #333;
+      font-size: 1rem;
+      box-shadow: none;
+    }
+/* corazones que aparecen */ 
+    #explosion-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .exploding-heart {
+      position: absolute;
+      width: 20px;
+      height: 18px;
+      background-color: red;
+      transform: rotate(-45deg);
+      animation: explode 3.5s ease-out forwards;
+    }
+
+    .exploding-heart::before,
+    .exploding-heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 18px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .exploding-heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .exploding-heart::after {
+      left: 10px;
+      top: 0;
+    }
+
+    @keyframes explode {
+      0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1) rotate(-45deg);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(var(--x), var(--y)) scale(2) rotate(45deg);
+      }
+    }
+        /* Corazón con sombra y animación */
+        .heart-wrapper {
+        width: 250px;
+        margin: 0 auto 2rem;
+        animation: float 3.5s ease-in-out infinite;
+        box-shadow: none;
+    }
+
+     /* Animación suave */
+     @keyframes float {
+      0% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+ /* boton */
+    #amorBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#amorBtn:hover {
+  background-color: #ff85c1;
+}
+
+#corazonGigante {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  font-size: 60px;
+  color: #ff3366;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  z-index: 999;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+  </style>
+</head>
+<body>
+  <div id="explosion-container"></div>
+
+  <div class="container">
+    <div class="heart-wrapper">
+      <svg class="heart" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 80 L10 30 A20 20 0 0 1 50 10 A20 20 0 0 1 90 30 Z" fill="#ff69b4" />
+        <text x="50%" y="35%" text-anchor="middle" fill="white" font-size="6" font-weight="bold">
+          Para Sabri
+        </text>
+        <text x="50%" y="45%" text-anchor="middle" fill="white" font-size="6" font-weight="bold">
+          El amor de mi vida
+        </text>
+      </svg>
+    </div>
+
+    <div class="text-block">
+        <h1>Te Amo</h1>
+      <p>
+        Te amo con todo lo que soy. Y aunque a veces no me salgan las palabras como quisiera, quiero que sepas que mi intención siempre es hacerte sentir bien, cuidarte, y darte lo mejor que tengo. Perdón por los momentos en los que no estuve a la altura, por esos días en los que quizás no te hice sentir como merecés. No hay excusa, solo ganas de mejorar y de aprender a quererte como vos necesitás. <br>
+    Te admiro profundamente, mi vida. Admiro tu fuerza, tu manera de sostenernos incluso cuando las cosas se ponen difíciles. Me emociona cómo enfrentás la vida, cómo te bancás todo. Sos una mujer increíble, y cada día me doy cuenta de lo afortunado que soy de tenerte cerca. <br>
+    Me enamora la forma en que seguimos apostando a nosotros, incluso cuando hay obstáculos. Me das paz, me das seguridad, me hacés sentir que, aunque cometamos errores, no vamos a soltarnos. Y eso vale oro. Me encanta que podamos hablar sin miedo, sin verguenza, sin esa sensación de que cualquier cosa puede romper lo que tenemos. Me gusta que seas fuerte, que seas honesta, que seas vos. Y te admiro por eso, posta. <br>
+    Sé que a veces soy medio boludo, que no siempre reacciono como debería, y te agradezco de corazón la paciencia que me tenés. Me duele no poder darte todo lo que merecés, porque vos merecés ser tratada como lo que sos: una princesa hermosa, valiente, fuerte. Pero estoy acá, aprendiendo, creciendo, queriéndote cada vez más. <br>
+    Gracias por seguir conmigo, por no soltarme, por creer en lo que construimos. Yo también creo en esto, en nosotros, en el amor que nos tenemos. Y sé que si seguimos cuidándolo, vamos a tener una relación hermosa, larga, llena de momentos que nos hagan sentir vivos.
+
+    Te amo, Sabri. Te amo con locura, con ternura, con compromiso. Y te voy a amar cada día un poco más.</p>
+    </div>
+    <div class="text-block">
+        <h2>La maravilla de persona que sos.</h2>
+      <p>Amo que seas lo que sos</p>
+    </div>
+    <div class="text-block">
+        <h2>Pienso en vos cuando escucho...</h2>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3ISNDd22ezFR236taLSYwD?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+    <div class="text-block">
+        <button id="amorBtn">Apretame</button>
+        <div id="corazonGigante"> Te amo peshosha </div>
+    </div>
+  </div>
+
+
+  <script>
+    window.addEventListener("load", () => {
+      const container = document.getElementById("explosion-container");
+      for (let i = 0; i < 30; i++) {
+        const heart = document.createElement("div");
+        heart.classList.add("exploding-heart");
+
+        heart.style.top = Math.random() * window.innerHeight + "px";
+        heart.style.left = Math.random() * window.innerWidth + "px";
+        heart.style.setProperty("--x", (Math.random() * 200 - 100) + "px");
+        heart.style.setProperty("--y", (Math.random() * 200 - 100) + "px");
+
+        container.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 1500);
+      }
+    });
+  </script>
+
+  <script>
+    const btn = document.getElementById('amorBtn');
+const corazon = document.getElementById('corazonGigante');
+
+btn.addEventListener('click', () => {
+  corazon.style.transform = 'translate(-50%, -50%) scale(1)';
+  corazon.style.opacity = '1';
+
+  setTimeout(() => {
+    corazon.style.transform = 'translate(-50%, -50%) scale(0)';
+    corazon.style.opacity = '0';
+  }, 2000); // dura 2 segundos
+});
+
+  </script>
+</body>
+</html>
